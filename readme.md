@@ -1,31 +1,17 @@
-# Text Summarizer
+# LLaMA Text Summarizer
 
-## Purpose
+This project is a simple AI application that uses a locally hosted LLaMA model (via Ollama) to summarize text.
 
-This project provides a text summarization tool that condenses long documents into shorter, meaningful summaries while preserving key information.
+## Features
+- FastAPI backend
+- Streamlit frontend
+- Local LLaMA inference using Ollama
 
-## Usage
-
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the summarizer
-python summarizer.py --input input.txt --output summary.txt
-```
-
-### Options
-
-- `--input`: Path to the input text file
-- `--output`: Path to save the summary (optional)
-- `--length`: Desired summary length (optional)
-
-## Example
-
-```python
-from summarizer import TextSummarizer
-
-summarizer = TextSummarizer()
-summary = summarizer.summarize("Your long text here...")
-print(summary)
-```
+## Setup Instructions
+1. Clone the repository
+2. Install dependencies:
+   pip install -r requirements.txt
+3. Start backend:
+   uvicorn backend.main:app --reload
+4. Start frontend:
+   streamlit run frontend/app.py
